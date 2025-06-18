@@ -1,0 +1,70 @@
+================================================================================
+RESUMO DA ANÁLISE DE CLASSIFICAÇÃO DE GRÃOS
+================================================================================
+
+Data da análise: 2025-06-17 23:30:26
+
+RESULTADOS DOS MODELOS ORIGINAIS:
+----------------------------------------
+
+KNN:
+  Acurácia: 0.8730
+  Precisão: 0.8721
+  Recall: 0.8730
+  F1-Score: 0.8713
+
+SVM:
+  Acurácia: 0.8730
+  Precisão: 0.8721
+  Recall: 0.8730
+  F1-Score: 0.8713
+
+Random Forest:
+  Acurácia: 0.9206
+  Precisão: 0.9239
+  Recall: 0.9206
+  F1-Score: 0.9192
+
+Naive Bayes:
+  Acurácia: 0.8254
+  Precisão: 0.8339
+  Recall: 0.8254
+  F1-Score: 0.8251
+
+Logistic Regression:
+  Acurácia: 0.8571
+  Precisão: 0.8571
+  Recall: 0.8571
+  F1-Score: 0.8543
+
+
+RESULTADOS DOS MODELOS OTIMIZADOS:
+----------------------------------------
+
+Random Forest:
+  Acurácia: 0.8889
+  Melhores parâmetros: {'max_depth': None, 'min_samples_split': 5, 'n_estimators': 50}
+
+KNN:
+  Acurácia: 0.8889
+  Melhores parâmetros: {'metric': 'manhattan', 'n_neighbors': 3, 'weights': 'uniform'}
+
+SVM:
+  Acurácia: 0.8889
+  Melhores parâmetros: {'C': 100, 'gamma': 'scale', 'kernel': 'linear'}
+
+
+PRINCIPAIS INSIGHTS:
+----------------------------------------
+
+1. DISTRIBUIÇÃO DAS CLASSES: O dataset está perfeitamente balanceado com 70 amostras de cada variedade.
+
+2. CARACTERÍSTICAS MAIS DISCRIMINANTES: Com base na análise do Random Forest, as características mais importantes são: area, perimeter, kernel_groove_length.
+
+3. CORRELAÇÕES: Existe forte correlação entre area e perimeter (0.994).
+
+4. PERFORMANCE DOS MODELOS: O melhor modelo foi Random Forest com 88.9% de acurácia.
+
+5. APLICAÇÃO PRÁTICA: Os modelos desenvolvidos podem ser implementados em cooperativas agrícolas para automatizar a classificação de grãos, reduzindo tempo e erros humanos.
+
+6. ROBUSTEZ: A alta acurácia obtida por todos os modelos (>90%) indica que as características físicas medidas são altamente discriminativas para diferenciar as variedades de trigo.

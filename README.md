@@ -43,13 +43,30 @@
 
 ### 🎯 Objetivos
 
+### 📁 Estrutura de Diretórios
 
 ### 🏗 Arquitetura do Sistema
-
 
 ### 💻 Como Executar o Projeto
 
 #### Pré-requisitos:
+
+O projeto requer Python 3.8+ com as seguintes dependências principais:
+
+    pandas
+    numpy
+    scikit-learn
+    matplotlib
+    seaborn
+    joblib
+
+1. Clone o repositório e vá até o projeto:
+
+    git clone https://github.com/noepraexis/fase3-cap14 && cd fase3-cap14
+
+para executação do projeto e acesso aos processos de Machine Learning e visualização. Execute:
+
+    python3 -m pip install -r requirements.txt
 
 
 #### Instruções de Execução:
