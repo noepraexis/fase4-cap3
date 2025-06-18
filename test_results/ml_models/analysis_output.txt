@@ -1,0 +1,192 @@
+================================================================================
+ANÁLISE DETALHADA DOS MODELOS DE MACHINE LEARNING
+================================================================================
+
+1. PREPROCESSAMENTO DOS DADOS
+==================================================
+Normalização Z-score aplicada:
+  area:
+    Original: μ=14.848, σ=2.910
+    Normalizado: μ=-3.4e-16, σ=1.000
+  perimeter:
+    Original: μ=14.559, σ=1.306
+    Normalizado: μ=1.2e-16, σ=1.000
+  compactness:
+    Original: μ=0.871, σ=0.024
+    Normalizado: μ=1.3e-15, σ=1.000
+  kernel_length:
+    Original: μ=5.629, σ=0.443
+    Normalizado: μ=-2.1e-15, σ=1.000
+  kernel_width:
+    Original: μ=3.259, σ=0.378
+    Normalizado: μ=-3.4e-16, σ=1.000
+  asymmetry_coefficient:
+    Original: μ=3.700, σ=1.504
+    Normalizado: μ=-3.4e-16, σ=1.000
+  kernel_groove_length:
+    Original: μ=5.408, σ=0.491
+    Normalizado: μ=-9.0e-17, σ=1.000
+
+Divisão dos dados:
+  Total de amostras: 210
+  Conjunto de treino: 147 amostras (70.0%)
+  Conjunto de teste: 63 amostras (30.0%)
+
+Distribuição no conjunto de teste:
+  Variedade 1: 21 amostras (33.3%)
+  Variedade 2: 21 amostras (33.3%)
+  Variedade 3: 21 amostras (33.3%)
+
+2. MODELOS BASE (SEM OTIMIZAÇÃO)
+==================================================
+KNN: 0.8730 (55/63 corretas)
+SVM: 0.8730 (55/63 corretas)
+Random Forest: 0.9206 (58/63 corretas)
+Logistic Regression: 0.8571 (54/63 corretas)
+Naive Bayes: 0.8254 (52/63 corretas)
+
+3. OTIMIZAÇÃO DE HIPERPARÂMETROS
+==================================================
+
+KNN - Grid Search:
+  Total de combinações testadas: 24
+  Melhor configuração: {'metric': 'manhattan', 'n_neighbors': 9, 'weights': 'distance'}
+  Score CV: 0.9391
+
+SVM - Grid Search:
+  Total de combinações testadas: 60
+  Melhor configuração: {'C': 100, 'gamma': 'scale', 'kernel': 'linear'}
+  Score CV: 0.9731
+
+Random Forest - Grid Search:
+  Total de combinações testadas: 108
+  Melhor configuração: {'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 50}
+  Score CV: 0.9124
+
+4. RESULTADOS DOS MODELOS OTIMIZADOS
+==================================================
+
+KNN:
+----------------------------------------
+Acurácia no teste: 0.8571 (54/63 corretas)
+Precisão (weighted): 0.8571
+Recall (weighted): 0.8571
+F1-Score (weighted): 0.8543
+
+Cross-validation 5-fold:
+  Scores individuais: [np.float64(0.9), np.float64(0.9333), np.float64(1.0), np.float64(0.9655), np.float64(0.8966)]
+  Média: 0.9391
+  Desvio padrão: 0.0394
+  Coeficiente de variação: 4.20%
+
+Melhoria com otimização: -1.82%
+
+Matriz de confusão:
+  Predito →
+Real ↓    1    2    3
+  1      15    2    4  
+  2       2   19    0  
+  3       1    0   20  
+
+Análise de erros:
+  Total de erros: 9
+  Kama → Rosa: 2 erro(s)
+  Kama → Canadian: 4 erro(s)
+  Rosa → Kama: 2 erro(s)
+  Canadian → Kama: 1 erro(s)
+
+SVM:
+----------------------------------------
+Acurácia no teste: 0.8889 (56/63 corretas)
+Precisão (weighted): 0.8908
+Recall (weighted): 0.8889
+F1-Score (weighted): 0.8875
+
+Cross-validation 5-fold:
+  Scores individuais: [np.float64(0.9667), np.float64(0.9333), np.float64(1.0), np.float64(1.0), np.float64(0.9655)]
+  Média: 0.9731
+  Desvio padrão: 0.0250
+  Coeficiente de variação: 2.57%
+
+Melhoria com otimização: +1.82%
+
+Matriz de confusão:
+  Predito →
+Real ↓    1    2    3
+  1      17    1    3  
+  2       3   18    0  
+  3       0    0   21  
+
+Análise de erros:
+  Total de erros: 7
+  Kama → Rosa: 1 erro(s)
+  Kama → Canadian: 3 erro(s)
+  Rosa → Kama: 3 erro(s)
+
+Random Forest:
+----------------------------------------
+Acurácia no teste: 0.8730 (55/63 corretas)
+Precisão (weighted): 0.8751
+Recall (weighted): 0.8730
+F1-Score (weighted): 0.8719
+
+Cross-validation 5-fold:
+  Scores individuais: [np.float64(0.8667), np.float64(0.8333), np.float64(1.0), np.float64(0.931), np.float64(0.931)]
+  Média: 0.9124
+  Desvio padrão: 0.0578
+  Coeficiente de variação: 6.34%
+
+Melhoria com otimização: -5.17%
+
+Logistic Regression:
+----------------------------------------
+Acurácia no teste: 0.8571 (54/63 corretas)
+Precisão (weighted): 0.8571
+Recall (weighted): 0.8571
+F1-Score (weighted): 0.8543
+
+Cross-validation 5-fold:
+  Scores individuais: [np.float64(0.9333), np.float64(0.9667), np.float64(1.0), np.float64(0.931), np.float64(0.8966)]
+  Média: 0.9455
+  Desvio padrão: 0.0351
+  Coeficiente de variação: 3.72%
+
+Melhoria com otimização: +0.00%
+
+Naive Bayes:
+----------------------------------------
+Acurácia no teste: 0.8254 (52/63 corretas)
+Precisão (weighted): 0.8339
+Recall (weighted): 0.8254
+F1-Score (weighted): 0.8251
+
+Cross-validation 5-fold:
+  Scores individuais: [np.float64(0.8), np.float64(0.8667), np.float64(1.0), np.float64(0.9655), np.float64(0.8966)]
+  Média: 0.9057
+  Desvio padrão: 0.0711
+  Coeficiente de variação: 7.85%
+
+Melhoria com otimização: +0.00%
+
+5. IMPORTÂNCIA DAS FEATURES (RANDOM FOREST)
+==================================================
+Ranking de importância:
+1. area: 0.248 (24.8% acumulado)
+2. perimeter: 0.237 (48.6% acumulado)
+3. kernel_groove_length: 0.176 (66.2% acumulado)
+4. kernel_width: 0.163 (82.5% acumulado)
+5. kernel_length: 0.091 (91.6% acumulado)
+6. asymmetry_coefficient: 0.048 (96.4% acumulado)
+7. compactness: 0.036 (100.0% acumulado)
+
+6. RESUMO COMPARATIVO
+==================================================
+
+Tabela de resultados:
+Modelo               Acurácia   CV Score        Estabilidade
+------------------------------------------------------------
+SVM                  0.8889     0.9731 ± 0.0250 Excelente
+Random Forest        0.8730     0.9124 ± 0.0578 Boa
+KNN                  0.8571     0.9391 ± 0.0394 Excelente
+Logistic Regression  0.8571     0.9455 ± 0.0351 Excelente
+Naive Bayes          0.8254     0.9057 ± 0.0711 Boa

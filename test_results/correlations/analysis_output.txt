@@ -1,0 +1,105 @@
+================================================================================
+ANÁLISE DETALHADA DAS CORRELAÇÕES
+================================================================================
+
+Matriz de Correlação Completa:
+==================================================
+                        area  ...  kernel_groove_length
+area                   1.000  ...                 0.864
+perimeter              0.994  ...                 0.891
+compactness            0.608  ...                 0.227
+kernel_length          0.950  ...                 0.933
+kernel_width           0.971  ...                 0.749
+asymmetry_coefficient -0.230  ...                -0.011
+kernel_groove_length   0.864  ...                 1.000
+
+[7 rows x 7 columns]
+
+==================================================
+ANÁLISE DETALHADA DE CORRELAÇÕES
+==================================================
+
+1. CORRELAÇÕES MUITO FORTES (|r| > 0.90):
+----------------------------------------
+• area ↔ perimeter: 0.994 (positiva)
+• perimeter ↔ kernel_length: 0.972 (positiva)
+• area ↔ kernel_width: 0.971 (positiva)
+• area ↔ kernel_length: 0.950 (positiva)
+• perimeter ↔ kernel_width: 0.945 (positiva)
+• kernel_length ↔ kernel_groove_length: 0.933 (positiva)
+
+2. CORRELAÇÕES FORTES (0.70 < |r| ≤ 0.90):
+----------------------------------------
+• perimeter ↔ kernel_groove_length: 0.891 (positiva)
+• area ↔ kernel_groove_length: 0.864 (positiva)
+• kernel_length ↔ kernel_width: 0.860 (positiva)
+• compactness ↔ kernel_width: 0.762 (positiva)
+• kernel_width ↔ kernel_groove_length: 0.749 (positiva)
+
+3. CORRELAÇÕES MODERADAS (0.30 < |r| ≤ 0.70):
+----------------------------------------
+• area ↔ compactness: 0.608 (positiva)
+• perimeter ↔ compactness: 0.529 (positiva)
+• compactness ↔ kernel_length: 0.368 (positiva)
+• compactness ↔ asymmetry_coefficient: -0.331 (negativa)
+
+4. CORRELAÇÕES FRACAS (|r| ≤ 0.30):
+----------------------------------------
+• kernel_width ↔ asymmetry_coefficient: -0.258 (negativa)
+• area ↔ asymmetry_coefficient: -0.230 (negativa)
+• compactness ↔ kernel_groove_length: 0.227 (positiva)
+• perimeter ↔ asymmetry_coefficient: -0.217 (negativa)
+• kernel_length ↔ asymmetry_coefficient: -0.172 (negativa)
+• asymmetry_coefficient ↔ kernel_groove_length: -0.011 (negativa)
+
+==================================================
+ANÁLISE DE MULTICOLINEARIDADE
+==================================================
+
+Características com correlações problemáticas (|r| > 0.8):
+⚠️  area ↔ perimeter: 0.994
+   Risco de multicolinearidade - considerar remoção de uma variável
+⚠️  perimeter ↔ kernel_length: 0.972
+   Risco de multicolinearidade - considerar remoção de uma variável
+⚠️  area ↔ kernel_width: 0.971
+   Risco de multicolinearidade - considerar remoção de uma variável
+⚠️  area ↔ kernel_length: 0.950
+   Risco de multicolinearidade - considerar remoção de uma variável
+⚠️  perimeter ↔ kernel_width: 0.945
+   Risco de multicolinearidade - considerar remoção de uma variável
+⚠️  kernel_length ↔ kernel_groove_length: 0.933
+   Risco de multicolinearidade - considerar remoção de uma variável
+⚠️  perimeter ↔ kernel_groove_length: 0.891
+   Risco de multicolinearidade - considerar remoção de uma variável
+⚠️  area ↔ kernel_groove_length: 0.864
+   Risco de multicolinearidade - considerar remoção de uma variável
+⚠️  kernel_length ↔ kernel_width: 0.860
+   Risco de multicolinearidade - considerar remoção de uma variável
+
+==================================================
+ESTATÍSTICAS DAS CORRELAÇÕES
+==================================================
+Total de pares de características: 21
+Correlação média: 0.495
+Correlação média (valor absoluto): 0.612
+Correlação máxima: 0.994
+Correlação mínima: -0.331
+Desvio padrão das correlações: 0.486
+
+Distribuição das correlações:
+• Muito fortes (|r| > 0.90): 6 (28.6%)
+• Fortes (0.70 < |r| ≤ 0.90): 5 (23.8%)
+• Moderadas (0.30 < |r| ≤ 0.70): 4 (19.0%)
+• Fracas (|r| ≤ 0.30): 6 (28.6%)
+
+==================================================
+RANKING DE CARACTERÍSTICAS MAIS CORRELACIONADAS
+==================================================
+Características ordenadas por correlação média com outras:
+1. area: 0.769
+2. perimeter: 0.758
+3. kernel_width: 0.757
+4. kernel_length: 0.709
+5. kernel_groove_length: 0.612
+6. compactness: 0.471
+7. asymmetry_coefficient: 0.203

@@ -1,0 +1,167 @@
+================================================================================
+ANÁLISE DETALHADA DAS MÉTRICAS DE PERFORMANCE
+================================================================================
+
+1. ANÁLISE DE THROUGHPUT
+==================================================
+
+A. Processo Manual (Baseline):
+----------------------------------------
+Tempo médio por amostra: 4.9 ± 0.8 minutos
+  - Preparação da amostra: ~1.2 minutos
+  - Análise visual: ~2.8 minutos
+  - Registro dos dados: ~0.9 minutos
+
+Throughput teórico: 12.24 amostras/hora
+
+Jornada de trabalho:
+  - Horas totais: 8h
+  - Pausas (15min/2h): 1.00h
+  - Almoço: 1h
+  - Horas produtivas: 6.00h (75.0%)
+
+Throughput efetivo considerando pausas:
+  - Por dia: 73.5 amostras
+  - Por hora (média): 9.2 amostras/hora
+
+B. Sistema Automatizado:
+----------------------------------------
+Tempo de processamento por amostra:
+  - Captura da imagem: 50ms
+  - Extração de features: 80ms
+  - Inferência ML: 20ms
+  - TOTAL: 150ms (0.150s)
+
+Throughput automatizado:
+  - Por hora: 24000 amostras/hora
+  - Por dia (24h): 576000 amostras/dia
+
+C. Cálculo da Melhoria de Throughput:
+----------------------------------------
+
+Comparação hora a hora:
+  Manual: 12.2 amostras/hora
+  Automatizado: 24000 amostras/hora
+  Fator de melhoria: 1960.0x
+  Melhoria percentual: 195900%
+
+Comparação diária:
+  Manual (8h): 73 amostras/dia
+  Automatizado (24h): 576000 amostras/dia
+  Fator de melhoria: 7840.0x
+
+>>> CONCLUSÃO: Melhoria de throughput = 195900% <<<
+
+
+2. ANÁLISE DE CUSTOS OPERACIONAIS
+==================================================
+
+A. Custos do Processo Manual:
+----------------------------------------
+Estrutura de custos - Especialista:
+  - Salário base: R$ 4,200.00/mês
+  - Encargos (67%): R$ 2,814.00/mês
+  - Custo total: R$ 7,014.00/mês
+
+Custo por hora: R$ 39.85/hora
+Custo por amostra: R$ 3.25/amostra
+Custo com overhead (15%): R$ 3.74/amostra
+
+B. Custos do Sistema Automatizado:
+----------------------------------------
+Investimento inicial:
+  - Hardware: R$ 45,000.00
+  - Software: R$ 80,000.00
+  - Integração: R$ 25,000.00
+  - TOTAL: R$ 150,000.00
+
+Custos operacionais por hora:
+  - Depreciação (5 anos): R$ 3.42/hora
+  - Energia elétrica: R$ 1.50/hora
+  - Manutenção: R$ 1.00/hora
+  - TOTAL: R$ 5.92/hora
+
+Custo por amostra: R$ 0.00/amostra
+
+C. Cálculo da Redução de Custos:
+----------------------------------------
+
+Comparação de custos por amostra:
+  Manual: R$ 3.25
+  Automatizado: R$ 0.00
+  Economia: R$ 3.25 (100.0%)
+
+>>> CONCLUSÃO: Redução de custos = 100.0% <<<
+
+
+3. ANÁLISE DE RETORNO SOBRE INVESTIMENTO (ROI)
+==================================================
+
+A. Volume de Processamento Anual:
+----------------------------------------
+Volume estimado:
+  - Amostras/dia: 150
+  - Dias úteis/ano: 250
+  - Total anual: 37,500 amostras
+
+B. Economia Anual:
+----------------------------------------
+Economia com mão de obra:
+  - Custo manual/ano: R$ 140,354.72
+  - Custo automatizado/ano: R$ 9.26
+  - Economia: R$ 140,345.47
+
+Ganhos com aumento de capacidade:
+  - Capacidade adicional: 575927 amostras/dia
+  - Utilização estimada: 30%
+  - Receita adicional/ano: R$ 215,972,448.98
+
+Ganhos com melhoria de qualidade:
+  - Redução de retrabalho: 15%
+  - Economia/ano: R$ 1,684.26
+
+Benefícios totais anuais:
+  - Economia mão de obra: R$ 140,345.47
+  - Receita adicional: R$ 215,972,448.98
+  - Economia qualidade: R$ 1,684.26
+  - TOTAL: R$ 216,114,478.70
+
+C. Cálculo do ROI:
+----------------------------------------
+
+Retorno sobre Investimento:
+  - Investimento: R$ 150,000.00
+  - Retorno ano 1: R$ 216,114,478.70
+  - ROI ano 1: 143976%
+  - Payback: 0.0 meses
+
+Projeção 5 anos:
+  Ano 1: R$ 215,964,478.70 (VP: R$ 196,331,344.27)
+  Ano 2: R$ 216,114,478.70 (VP: R$ 178,607,007.19)
+  Ano 3: R$ 216,114,478.70 (VP: R$ 162,370,006.54)
+  Ano 4: R$ 216,114,478.70 (VP: R$ 147,609,096.85)
+  Ano 5: R$ 216,114,478.70 (VP: R$ 134,190,088.05)
+
+Valor Presente Líquido (VPL): R$ 819,107,542.90
+
+>>> CONCLUSÃO: ROI = 143976% no primeiro ano <<<
+
+
+4. OUTRAS MÉTRICAS DE PERFORMANCE
+==================================================
+
+A. Disponibilidade:
+  Manual: 25.0% (6.0h/24h)
+  Automatizado: 99.9% (24h/24h com SLA)
+  Melhoria: 200% (+3x)
+
+B. Consistência:
+  Manual: ±14.7% de variação
+  Automatizado: 0% de variação
+  Melhoria: Eliminação total da variabilidade
+
+C. Acurácia:
+  Manual (ideal): 91.7%
+  Manual (real): 85.0%
+  Automatizado: 88.89%
+  Comparação: +3.89% vs real

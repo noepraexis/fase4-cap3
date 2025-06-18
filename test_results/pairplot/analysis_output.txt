@@ -1,0 +1,279 @@
+================================================================================
+ANÁLISE DETALHADA DO PAIRPLOT
+================================================================================
+Características no pairplot: ['area', 'perimeter', 'compactness', 'kernel_length']
+Variedades: ['Kama' 'Rosa' 'Canadian']
+Total de amostras: 210
+
+================================================================================
+ANÁLISE DAS DISTRIBUIÇÕES (DIAGONAL)
+================================================================================
+
+--- AREA ---
+Distribuição geral:
+  Média: 14.848
+  Mediana: 14.355
+  Desvio padrão: 2.910
+  Skewness: 0.400
+Distribuições por variedade:
+  Kama:
+    Média: 14.334
+    Std: 1.216
+    Min-Max: [11.230, 17.080]
+  Rosa:
+    Média: 18.334
+    Std: 1.439
+    Min-Max: [15.380, 21.180]
+  Canadian:
+    Média: 11.874
+    Std: 0.723
+    Min-Max: [10.590, 13.370]
+  Distância Kama-Rosa: 4.000
+  Distância Kama-Canadian: 2.461
+  Distância Rosa-Canadian: 6.460
+  Coeficiente de separabilidade: 3.82
+
+--- PERIMETER ---
+Distribuição geral:
+  Média: 14.559
+  Mediana: 14.320
+  Desvio padrão: 1.306
+  Skewness: 0.387
+Distribuições por variedade:
+  Kama:
+    Média: 14.294
+    Std: 0.577
+    Min-Max: [12.630, 15.460]
+  Rosa:
+    Média: 16.136
+    Std: 0.617
+    Min-Max: [14.660, 17.250]
+  Canadian:
+    Média: 13.248
+    Std: 0.340
+    Min-Max: [12.410, 13.950]
+  Distância Kama-Rosa: 1.841
+  Distância Kama-Canadian: 1.046
+  Distância Rosa-Canadian: 2.888
+  Coeficiente de separabilidade: 3.77
+
+--- COMPACTNESS ---
+Distribuição geral:
+  Média: 0.871
+  Mediana: 0.873
+  Desvio padrão: 0.024
+  Skewness: -0.538
+Distribuições por variedade:
+  Kama:
+    Média: 0.880
+    Std: 0.016
+    Min-Max: [0.839, 0.918]
+  Rosa:
+    Média: 0.884
+    Std: 0.016
+    Min-Max: [0.845, 0.911]
+  Canadian:
+    Média: 0.849
+    Std: 0.022
+    Min-Max: [0.808, 0.898]
+  Distância Kama-Rosa: 0.003
+  Distância Kama-Canadian: 0.031
+  Distância Rosa-Canadian: 0.034
+  Coeficiente de separabilidade: 1.28
+
+--- KERNEL LENGTH ---
+Distribuição geral:
+  Média: 5.629
+  Mediana: 5.524
+  Desvio padrão: 0.443
+  Skewness: 0.525
+Distribuições por variedade:
+  Kama:
+    Média: 5.508
+    Std: 0.232
+    Min-Max: [4.902, 6.053]
+  Rosa:
+    Média: 6.148
+    Std: 0.268
+    Min-Max: [5.363, 6.675]
+  Canadian:
+    Média: 5.230
+    Std: 0.138
+    Min-Max: [4.899, 5.541]
+  Distância Kama-Rosa: 0.640
+  Distância Kama-Canadian: 0.279
+  Distância Rosa-Canadian: 0.919
+  Coeficiente de separabilidade: 2.88
+
+================================================================================
+ANÁLISE DOS SCATTER PLOTS (RELAÇÕES ENTRE VARIÁVEIS)
+================================================================================
+
+--- AREA vs PERIMETER ---
+Correlação geral: 0.994
+Correlações por variedade:
+  Kama: 0.976
+  Rosa: 0.976
+  Canadian: 0.908
+Análise de agrupamento:
+  Kama:
+    Centro: (14.334, 14.294)
+    Dispersão: (1.216, 0.577)
+    Raio médio: 1.050
+  Rosa:
+    Centro: (18.334, 16.136)
+    Dispersão: (1.439, 0.617)
+    Raio médio: 1.265
+  Canadian:
+    Centro: (11.874, 13.248)
+    Dispersão: (0.723, 0.340)
+    Raio médio: 0.693
+Distâncias entre centros dos clusters:
+  Kama ↔ Rosa: 4.403
+  Kama ↔ Canadian: 2.674
+  Rosa ↔ Canadian: 7.077
+Análise de sobreposição:
+  Kama ↔ Rosa: 8.2% e 9.1% de sobreposição
+  Kama ↔ Canadian: 17.1% e 66.0% de sobreposição
+  Rosa ↔ Canadian: Sem sobreposição
+
+--- AREA vs KERNEL_LENGTH ---
+Correlação geral: 0.950
+Correlações por variedade:
+  Kama: 0.835
+  Rosa: 0.826
+  Canadian: 0.517
+Análise de agrupamento:
+  Kama:
+    Centro: (14.334, 5.508)
+    Dispersão: (1.216, 0.232)
+    Raio médio: 0.969
+  Rosa:
+    Centro: (18.334, 6.148)
+    Dispersão: (1.439, 0.268)
+    Raio médio: 1.187
+  Canadian:
+    Centro: (11.874, 5.230)
+    Dispersão: (0.723, 0.138)
+    Raio médio: 0.636
+Distâncias entre centros dos clusters:
+  Kama ↔ Rosa: 4.051
+  Kama ↔ Canadian: 2.476
+  Rosa ↔ Canadian: 6.525
+Análise de sobreposição:
+  Kama ↔ Rosa: 17.4% e 15.4% de sobreposição
+  Kama ↔ Canadian: 20.3% e 76.6% de sobreposição
+  Rosa ↔ Canadian: Sem sobreposição
+
+--- PERIMETER vs COMPACTNESS ---
+Correlação geral: 0.529
+Correlações por variedade:
+  Kama: 0.165
+  Rosa: 0.057
+  Canadian: 0.145
+Análise de agrupamento:
+  Kama:
+    Centro: (14.294, 0.880)
+    Dispersão: (0.577, 0.016)
+    Raio médio: 0.453
+  Rosa:
+    Centro: (16.136, 0.884)
+    Dispersão: (0.617, 0.016)
+    Raio médio: 0.490
+  Canadian:
+    Centro: (13.248, 0.849)
+    Dispersão: (0.340, 0.022)
+    Raio médio: 0.285
+Distâncias entre centros dos clusters:
+  Kama ↔ Rosa: 1.841
+  Kama ↔ Canadian: 1.047
+  Rosa ↔ Canadian: 2.888
+Análise de sobreposição:
+  Kama ↔ Rosa: 23.4% e 30.9% de sobreposição
+  Kama ↔ Canadian: 34.5% e 56.0% de sobreposição
+  Rosa ↔ Canadian: Sem sobreposição
+
+--- PERIMETER vs KERNEL_LENGTH ---
+Correlação geral: 0.972
+Correlações por variedade:
+  Kama: 0.921
+  Rosa: 0.906
+  Canadian: 0.794
+Análise de agrupamento:
+  Kama:
+    Centro: (14.294, 5.508)
+    Dispersão: (0.577, 0.232)
+    Raio médio: 0.500
+  Rosa:
+    Centro: (16.136, 6.148)
+    Dispersão: (0.617, 0.268)
+    Raio médio: 0.543
+  Canadian:
+    Centro: (13.248, 5.230)
+    Dispersão: (0.340, 0.138)
+    Raio médio: 0.313
+Distâncias entre centros dos clusters:
+  Kama ↔ Rosa: 1.949
+  Kama ↔ Canadian: 1.083
+  Rosa ↔ Canadian: 3.030
+Análise de sobreposição:
+  Kama ↔ Rosa: 16.9% e 16.2% de sobreposição
+  Kama ↔ Canadian: 25.9% e 85.3% de sobreposição
+  Rosa ↔ Canadian: Sem sobreposição
+
+--- COMPACTNESS vs KERNEL_LENGTH ---
+Correlação geral: 0.368
+Correlações por variedade:
+  Kama: -0.146
+  Rosa: -0.217
+  Canadian: -0.370
+Análise de agrupamento:
+  Kama:
+    Centro: (0.880, 5.508)
+    Dispersão: (0.016, 0.232)
+    Raio médio: 0.187
+  Rosa:
+    Centro: (0.884, 6.148)
+    Dispersão: (0.016, 0.268)
+    Raio médio: 0.211
+  Canadian:
+    Centro: (0.849, 5.230)
+    Dispersão: (0.022, 0.138)
+    Raio médio: 0.116
+Distâncias entre centros dos clusters:
+  Kama ↔ Rosa: 0.640
+  Kama ↔ Canadian: 0.280
+  Rosa ↔ Canadian: 0.919
+Análise de sobreposição:
+  Kama ↔ Rosa: 49.7% e 52.6% de sobreposição
+  Kama ↔ Canadian: 41.1% e 65.0% de sobreposição
+  Rosa ↔ Canadian: 10.9% e 16.2% de sobreposição
+
+================================================================================
+RESUMO: SEPARABILIDADE NO ESPAÇO MULTIDIMENSIONAL
+================================================================================
+
+Análise de separabilidade global:
+Kama:
+  Centro: ['14.334', '14.294', '0.880', '5.508']
+  Raio médio: 1.076
+  Raio máximo: 3.574
+Rosa:
+  Centro: ['18.334', '16.136', '0.884', '6.148']
+  Raio médio: 1.291
+  Raio máximo: 3.370
+Canadian:
+  Centro: ['11.874', '13.248', '0.849', '5.230']
+  Raio médio: 0.708
+  Raio máximo: 1.633
+
+Distâncias entre centros multidimensionais:
+  Kama ↔ Rosa: 4.450
+  Kama ↔ Canadian: 2.688
+  Rosa ↔ Canadian: 7.136
+
+Qualidade de separação:
+  Variância intra-cluster: 1.658
+  Variância inter-cluster: 8.661
+  Índice Calinski-Harabasz: 540.54
+  Qualidade de separação: EXCELENTE
