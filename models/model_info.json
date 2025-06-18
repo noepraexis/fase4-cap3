@@ -1,0 +1,37 @@
+{
+    "model_name": "KNN",
+    "model_type": "knn",
+    "accuracy": 0.8888888888888888,
+    "precision": 0.8879509379509379,
+    "recall": 0.8888888888888888,
+    "f1_score": 0.8880875851947888,
+    "cv_score": 0.945977011494253,
+    "best_params": {
+        "metric": "manhattan",
+        "n_neighbors": 3,
+        "weights": "uniform"
+    },
+    "features": [
+        "area",
+        "perimeter",
+        "compactness",
+        "kernel_length",
+        "kernel_width",
+        "asymmetry_coefficient",
+        "kernel_groove_length"
+    ],
+    "training_date": "2025-06-17 20:48:16",
+    "model_file": "../models/best_model_knn.pkl",
+    "scaler_file": "../models/scaler.pkl",
+    "dataset_info": {
+        "total_samples": 210,
+        "training_samples": 147,
+        "test_samples": 63,
+        "features_count": 7,
+        "classes": [
+            "Kama",
+            "Rosa",
+            "Canadian"
+        ]
+    }
+}
