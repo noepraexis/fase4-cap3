@@ -1,0 +1,216 @@
+================================================================================
+ANÁLISE DETALHADA DAS DISTRIBUIÇÕES
+================================================================================
+
+Dataset: 210 amostras, 8 características
+Variedades: ['Kama', 'Rosa', 'Canadian']
+
+==================================================
+1. DISTRIBUIÇÃO DAS VARIEDADES
+==================================================
+• Kama: 70 amostras (33.3%)
+• Rosa: 70 amostras (33.3%)
+• Canadian: 70 amostras (33.3%)
+
+==================================================
+2. ESTATÍSTICAS DESCRITIVAS POR CARACTERÍSTICA
+==================================================
+
+--- AREA ---
+Média: 14.848
+Mediana: 14.355
+Desvio Padrão: 2.910
+Mínimo: 10.590
+Máximo: 21.180
+Amplitude: 10.590
+Coeficiente de Variação: 19.6%
+
+Por variedade:
+  Kama: μ=14.334, σ=1.216, min=11.230, max=17.080
+  Rosa: μ=18.334, σ=1.439, min=15.380, max=21.180
+  Canadian: μ=11.874, σ=0.723, min=10.590, max=13.370
+
+--- PERIMETER ---
+Média: 14.559
+Mediana: 14.320
+Desvio Padrão: 1.306
+Mínimo: 12.410
+Máximo: 17.250
+Amplitude: 4.840
+Coeficiente de Variação: 9.0%
+
+Por variedade:
+  Kama: μ=14.294, σ=0.577, min=12.630, max=15.460
+  Rosa: μ=16.136, σ=0.617, min=14.660, max=17.250
+  Canadian: μ=13.248, σ=0.340, min=12.410, max=13.950
+
+--- COMPACTNESS ---
+Média: 0.871
+Mediana: 0.873
+Desvio Padrão: 0.024
+Mínimo: 0.808
+Máximo: 0.918
+Amplitude: 0.110
+Coeficiente de Variação: 2.7%
+
+Por variedade:
+  Kama: μ=0.880, σ=0.016, min=0.839, max=0.918
+  Rosa: μ=0.884, σ=0.016, min=0.845, max=0.911
+  Canadian: μ=0.849, σ=0.022, min=0.808, max=0.898
+
+--- KERNEL LENGTH ---
+Média: 5.629
+Mediana: 5.524
+Desvio Padrão: 0.443
+Mínimo: 4.899
+Máximo: 6.675
+Amplitude: 1.776
+Coeficiente de Variação: 7.9%
+
+Por variedade:
+  Kama: μ=5.508, σ=0.232, min=4.902, max=6.053
+  Rosa: μ=6.148, σ=0.268, min=5.363, max=6.675
+  Canadian: μ=5.230, σ=0.138, min=4.899, max=5.541
+
+--- KERNEL WIDTH ---
+Média: 3.259
+Mediana: 3.237
+Desvio Padrão: 0.378
+Mínimo: 2.630
+Máximo: 4.033
+Amplitude: 1.403
+Coeficiente de Variação: 11.6%
+
+Por variedade:
+  Kama: μ=3.245, σ=0.178, min=2.850, max=3.683
+  Rosa: μ=3.677, σ=0.186, min=3.231, max=4.033
+  Canadian: μ=2.854, σ=0.148, min=2.630, max=3.232
+
+--- ASYMMETRY COEFFICIENT ---
+Média: 3.700
+Mediana: 3.599
+Desvio Padrão: 1.504
+Mínimo: 0.765
+Máximo: 8.456
+Amplitude: 7.691
+Coeficiente de Variação: 40.6%
+
+Por variedade:
+  Kama: μ=2.667, σ=1.174, min=0.765, max=6.685
+  Rosa: μ=3.645, σ=1.182, min=1.472, max=6.682
+  Canadian: μ=4.788, σ=1.336, min=1.661, max=8.456
+
+--- KERNEL GROOVE LENGTH ---
+Média: 5.408
+Mediana: 5.223
+Desvio Padrão: 0.491
+Mínimo: 4.519
+Máximo: 6.550
+Amplitude: 2.031
+Coeficiente de Variação: 9.1%
+
+Por variedade:
+  Kama: μ=5.087, σ=0.264, min=4.519, max=5.877
+  Rosa: μ=6.021, σ=0.254, min=5.144, max=6.550
+  Canadian: μ=5.116, σ=0.162, min=4.745, max=5.491
+
+==================================================
+3. ANÁLISE DE NORMALIDADE (SKEWNESS)
+==================================================
+• area: Skewness = 0.400 (aproximadamente simétrica à direita)
+  Kurtosis = -1.084
+• perimeter: Skewness = 0.387 (aproximadamente simétrica à direita)
+  Kurtosis = -1.107
+• compactness: Skewness = -0.538 (moderadamente assimétrica à esquerda)
+  Kurtosis = -0.140
+• kernel_length: Skewness = 0.525 (moderadamente assimétrica à direita)
+  Kurtosis = -0.786
+• kernel_width: Skewness = 0.134 (aproximadamente simétrica à direita)
+  Kurtosis = -1.098
+• asymmetry_coefficient: Skewness = 0.402 (aproximadamente simétrica à direita)
+  Kurtosis = -0.067
+• kernel_groove_length: Skewness = 0.562 (moderadamente assimétrica à direita)
+  Kurtosis = -0.841
+
+==================================================
+4. ANÁLISE DE OUTLIERS (MÉTODO IQR)
+==================================================
+• area: 0 outliers (0.0%)
+• perimeter: 0 outliers (0.0%)
+• compactness: 3 outliers (1.4%)
+  Limites: [0.811, 0.934]
+• kernel_length: 0 outliers (0.0%)
+• kernel_width: 0 outliers (0.0%)
+• asymmetry_coefficient: 2 outliers (1.0%)
+  Limites: [-0.749, 8.080]
+• kernel_groove_length: 0 outliers (0.0%)
+
+Total de outliers no dataset: 5
+Percentual de amostras com outliers: 0.3%
+
+==================================================
+5. SEPARABILIDADE ENTRE VARIEDADES
+==================================================
+
+--- AREA ---
+  Kama: [11.230, 17.080] (μ=14.334)
+  Rosa: [15.380, 21.180] (μ=18.334)
+  Canadian: [10.590, 13.370] (μ=11.874)
+  Distâncias entre médias:
+    Kama-Rosa: 4.000
+    Kama-Canadian: 2.461
+    Rosa-Canadian: 6.460
+
+--- PERIMETER ---
+  Kama: [12.630, 15.460] (μ=14.294)
+  Rosa: [14.660, 17.250] (μ=16.136)
+  Canadian: [12.410, 13.950] (μ=13.248)
+  Distâncias entre médias:
+    Kama-Rosa: 1.841
+    Kama-Canadian: 1.046
+    Rosa-Canadian: 2.888
+
+--- COMPACTNESS ---
+  Kama: [0.839, 0.918] (μ=0.880)
+  Rosa: [0.845, 0.911] (μ=0.884)
+  Canadian: [0.808, 0.898] (μ=0.849)
+  Distâncias entre médias:
+    Kama-Rosa: 0.003
+    Kama-Canadian: 0.031
+    Rosa-Canadian: 0.034
+
+--- KERNEL LENGTH ---
+  Kama: [4.902, 6.053] (μ=5.508)
+  Rosa: [5.363, 6.675] (μ=6.148)
+  Canadian: [4.899, 5.541] (μ=5.230)
+  Distâncias entre médias:
+    Kama-Rosa: 0.640
+    Kama-Canadian: 0.279
+    Rosa-Canadian: 0.919
+
+--- KERNEL WIDTH ---
+  Kama: [2.850, 3.683] (μ=3.245)
+  Rosa: [3.231, 4.033] (μ=3.677)
+  Canadian: [2.630, 3.232] (μ=2.854)
+  Distâncias entre médias:
+    Kama-Rosa: 0.433
+    Kama-Canadian: 0.391
+    Rosa-Canadian: 0.824
+
+--- ASYMMETRY COEFFICIENT ---
+  Kama: [0.765, 6.685] (μ=2.667)
+  Rosa: [1.472, 6.682] (μ=3.645)
+  Canadian: [1.661, 8.456] (μ=4.788)
+  Distâncias entre médias:
+    Kama-Rosa: 0.977
+    Kama-Canadian: 2.121
+    Rosa-Canadian: 1.144
+
+--- KERNEL GROOVE LENGTH ---
+  Kama: [4.519, 5.877] (μ=5.087)
+  Rosa: [5.144, 6.550] (μ=6.021)
+  Canadian: [4.745, 5.491] (μ=5.116)
+  Distâncias entre médias:
+    Kama-Rosa: 0.933
+    Kama-Canadian: 0.029
+    Rosa-Canadian: 0.904

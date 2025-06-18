@@ -1,0 +1,268 @@
+================================================================================
+CÁLCULO DO FISHER RATIO E MÉTRICAS DE SEPARABILIDADE
+================================================================================
+
+Dataset: 210 amostras
+Variedades: ['Kama', 'Rosa', 'Canadian']
+Features: 7
+
+1. CÁLCULO DO FISHER RATIO
+==================================================
+
+Fórmula: F = σ²(between) / σ²(within)
+onde:
+  σ²(between) = variância entre grupos (inter-classe)
+  σ²(within) = variância dentro dos grupos (intra-classe)
+
+AREA:
+----------------------------------------
+  Kama:
+    n = 70
+    μ = 14.334
+    σ² = 1.478
+  Rosa:
+    n = 70
+    μ = 18.334
+    σ² = 2.072
+  Canadian:
+    n = 70
+    μ = 11.874
+    σ² = 0.523
+
+  Média global: μ_global = 14.848
+
+  Variância entre grupos (σ²_between):
+    Cálculo: Σ[n_i * (μ_i - μ_global)²] / (k-1)
+    Valor: 744.221
+
+  Variância dentro dos grupos (σ²_within):
+    Cálculo: Σ[(n_i - 1) * σ²_i] / Σ(n_i - 1)
+    Valor: 1.358
+
+  FISHER RATIO: 548.19
+  Interpretação: EXCELENTE separabilidade
+
+PERIMETER:
+----------------------------------------
+  Kama:
+    n = 70
+    μ = 14.294
+    σ² = 0.332
+  Rosa:
+    n = 70
+    μ = 16.136
+    σ² = 0.381
+  Canadian:
+    n = 70
+    μ = 13.248
+    σ² = 0.116
+
+  Média global: μ_global = 14.559
+
+  Variância entre grupos (σ²_between):
+    Cálculo: Σ[n_i * (μ_i - μ_global)²] / (k-1)
+    Valor: 149.632
+
+  Variância dentro dos grupos (σ²_within):
+    Cálculo: Σ[(n_i - 1) * σ²_i] / Σ(n_i - 1)
+    Valor: 0.276
+
+  FISHER RATIO: 541.58
+  Interpretação: EXCELENTE separabilidade
+
+COMPACTNESS:
+----------------------------------------
+  Kama:
+    n = 70
+    μ = 0.880
+    σ² = 0.000
+  Rosa:
+    n = 70
+    μ = 0.884
+    σ² = 0.000
+  Canadian:
+    n = 70
+    μ = 0.849
+    σ² = 0.000
+
+  Média global: μ_global = 0.871
+
+  Variância entre grupos (σ²_between):
+    Cálculo: Σ[n_i * (μ_i - μ_global)²] / (k-1)
+    Valor: 0.025
+
+  Variância dentro dos grupos (σ²_within):
+    Cálculo: Σ[(n_i - 1) * σ²_i] / Σ(n_i - 1)
+    Valor: 0.000
+
+  FISHER RATIO: 75.87
+  Interpretação: EXCELENTE separabilidade
+
+KERNEL_LENGTH:
+----------------------------------------
+  Kama:
+    n = 70
+    μ = 5.508
+    σ² = 0.054
+  Rosa:
+    n = 70
+    μ = 6.148
+    σ² = 0.072
+  Canadian:
+    n = 70
+    μ = 5.230
+    σ² = 0.019
+
+  Média global: μ_global = 5.629
+
+  Variância entre grupos (σ²_between):
+    Cálculo: Σ[n_i * (μ_i - μ_global)²] / (k-1)
+    Valor: 15.526
+
+  Variância dentro dos grupos (σ²_within):
+    Cálculo: Σ[(n_i - 1) * σ²_i] / Σ(n_i - 1)
+    Valor: 0.048
+
+  FISHER RATIO: 322.19
+  Interpretação: EXCELENTE separabilidade
+
+KERNEL_WIDTH:
+----------------------------------------
+  Kama:
+    n = 70
+    μ = 3.245
+    σ² = 0.032
+  Rosa:
+    n = 70
+    μ = 3.677
+    σ² = 0.034
+  Canadian:
+    n = 70
+    μ = 2.854
+    σ² = 0.022
+
+  Média global: μ_global = 3.259
+
+  Variância entre grupos (σ²_between):
+    Cálculo: Σ[n_i * (μ_i - μ_global)²] / (k-1)
+    Valor: 11.882
+
+  Variância dentro dos grupos (σ²_within):
+    Cálculo: Σ[(n_i - 1) * σ²_i] / Σ(n_i - 1)
+    Valor: 0.029
+
+  FISHER RATIO: 406.30
+  Interpretação: EXCELENTE separabilidade
+
+ASYMMETRY_COEFFICIENT:
+----------------------------------------
+  Kama:
+    n = 70
+    μ = 2.667
+    σ² = 1.378
+  Rosa:
+    n = 70
+    μ = 3.645
+    σ² = 1.397
+  Canadian:
+    n = 70
+    μ = 4.788
+    σ² = 1.786
+
+  Média global: μ_global = 3.700
+
+  Variância entre grupos (σ²_between):
+    Cálculo: Σ[n_i * (μ_i - μ_global)²] / (k-1)
+    Valor: 78.887
+
+  Variância dentro dos grupos (σ²_within):
+    Cálculo: Σ[(n_i - 1) * σ²_i] / Σ(n_i - 1)
+    Valor: 1.520
+
+  FISHER RATIO: 51.89
+  Interpretação: EXCELENTE separabilidade
+
+KERNEL_GROOVE_LENGTH:
+----------------------------------------
+  Kama:
+    n = 70
+    μ = 5.087
+    σ² = 0.070
+  Rosa:
+    n = 70
+    μ = 6.021
+    σ² = 0.064
+  Canadian:
+    n = 70
+    μ = 5.116
+    σ² = 0.026
+
+  Média global: μ_global = 5.408
+
+  Variância entre grupos (σ²_between):
+    Cálculo: Σ[n_i * (μ_i - μ_global)²] / (k-1)
+    Valor: 19.712
+
+  Variância dentro dos grupos (σ²_within):
+    Cálculo: Σ[(n_i - 1) * σ²_i] / Σ(n_i - 1)
+    Valor: 0.053
+
+  FISHER RATIO: 368.95
+  Interpretação: EXCELENTE separabilidade
+
+
+2. RANKING DE SEPARABILIDADE
+==================================================
+
+Ranking por Fisher Ratio:
+Rank   Feature                   Fisher Ratio    Classificação
+----------------------------------------------------------------------
+1      area                      548.19          Excelente
+2      perimeter                 541.58          Excelente
+3      kernel_width              406.30          Excelente
+4      kernel_groove_length      368.95          Excelente
+5      kernel_length             322.19          Excelente
+6      compactness               75.87           Excelente
+7      asymmetry_coefficient     51.89           Excelente
+
+
+3. ANÁLISE DETALHADA DA SEPARABILIDADE
+==================================================
+
+Distâncias Euclidianas entre centróides (espaço 7D):
+
+Centróides no espaço 7D:
+  Kama: ['14.334', '14.294', '0.880', '5.508', '3.245', '2.667', '5.087']
+  Rosa: ['18.334', '16.136', '0.884', '6.148', '3.677', '3.645', '6.021']
+  Canadian: ['11.874', '13.248', '0.849', '5.230', '2.854', '4.788', '5.116']
+
+Matriz de distâncias:
+                           Kama           Rosa       Canadian
+Kama                        ---          4.670          3.447
+Rosa                      4.670            ---          7.330
+Canadian                  3.447          7.330            ---
+
+Estatísticas das distâncias:
+  Distância mínima: 3.447
+  Distância máxima: 7.330
+  Distância média: 5.149
+
+
+4. ÍNDICE DE SEPARABILIDADE GLOBAL
+==================================================
+
+Índice Calinski-Harabasz: 310.43
+
+Interpretação:
+  > 500: Separabilidade excepcional
+  200-500: Separabilidade muito boa
+  100-200: Separabilidade boa
+  50-100: Separabilidade moderada
+  < 50: Separabilidade baixa
+
+Classificação: MUITO BOA
+
+Cálculo detalhado do índice CH:
+  SSB (variância entre grupos): 2039.77
+  SSW (variância dentro dos grupos): 680.08
+  CH = (SSB/(k-1)) / (SSW/(n-k)) = 310.43
