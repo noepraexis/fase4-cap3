@@ -1,0 +1,57 @@
+{
+    "metadata": {
+        "test_name": "ml_models",
+        "timestamp": "2025-06-20T17:20:57.034947",
+        "generated_by": "src/utils.py"
+    },
+    "results": {
+        "config": {
+            "random_seed": 42,
+            "test_size": 0.3,
+            "cv_folds": 5,
+            "dataset_shape": [
+                210,
+                9
+            ]
+        },
+        "models": {
+            "Canadian": {
+                "accuracy": 0.8888888888888888,
+                "precision": 0.8907894736842105,
+                "recall": 0.8888888888888888,
+                "f1": 0.8875338753387534,
+                "cv_mean": 0.973103448275862,
+                "cv_std": 0.02500997290843061
+            },
+            "RandomForest": {
+                "accuracy": 0.9047619047619048,
+                "precision": 0.906926406926407,
+                "recall": 0.9047619047619048,
+                "f1": 0.9054911811576587,
+                "cv_mean": 0.9124137931034483,
+                "cv_std": 0.05781232135050398
+            },
+            "LogisticRegression": {
+                "accuracy": 0.8888888888888888,
+                "precision": 0.8907894736842105,
+                "recall": 0.8888888888888888,
+                "f1": 0.8875338753387534,
+                "cv_mean": 0.9728735632183909,
+                "cv_std": 0.025073284054135125
+            },
+            "NaiveBayes": {
+                "accuracy": 0.8253968253968254,
+                "precision": 0.8339275103980986,
+                "recall": 0.8253968253968254,
+                "f1": 0.8250600661861371,
+                "cv_mean": 0.9057471264367816,
+                "cv_std": 0.07106386328378873
+            }
+        },
+        "summary": {
+            "best_model": "RandomForest",
+            "best_accuracy": 0.9047619047619048,
+            "total_models": 4
+        }
+    }
+}

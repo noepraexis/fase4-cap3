@@ -1,0 +1,40 @@
+================================================================================
+OUTPUT DO TESTE: ML_MODELS
+================================================================================
+Data da execução: 2025-06-20 17:20:57
+================================================================================
+
+
+RESUMO DA ANÁLISE ML
+==================================================
+
+Configuração:
+- Random Seed: 42
+- Test Size: 0.3
+- CV Folds: 5
+- Dataset: 210 amostras, 9 features
+
+Modelos Analisados: 4
+
+Melhores Resultados:
+
+RandomForest:
+  - Acurácia: 0.9048
+  - CV Score: 0.9124 ± 0.0578
+  - Precisão: 0.9069
+  - F1-Score: 0.9055
+Canadian:
+  - Acurácia: 0.8889
+  - CV Score: 0.9731 ± 0.0250
+  - Precisão: 0.8908
+  - F1-Score: 0.8875
+LogisticRegression:
+  - Acurácia: 0.8889
+  - CV Score: 0.9729 ± 0.0251
+  - Precisão: 0.8908
+  - F1-Score: 0.8875
+NaiveBayes:
+  - Acurácia: 0.8254
+  - CV Score: 0.9057 ± 0.0711
+  - Precisão: 0.8339
+  - F1-Score: 0.8251
