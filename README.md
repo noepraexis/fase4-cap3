@@ -143,8 +143,6 @@ projeto/
 ├── 
 ├── 📂 docs/                        # Documentação técnica
 │   ├── 📄 analise_classificacao_graos.md    # Análise principal
-│   ├── 📄 guia_algoritmos_ml.md             # Guia de algoritmos
-│   ├── 📄 metodologia_crisp_dm.md           # Metodologia
 │   └── 📄 prepare-environment.md            # Setup do ambiente
 ├── 
 ├── 📂 notebooks/                   # Jupyter Notebooks
