@@ -1,14 +1,14 @@
 {
     "metadata": {
         "test_name": "ml_models",
-        "timestamp": "2025-06-20T18:05:12.574132",
+        "timestamp": "2025-06-20T18:51:32.690317",
         "generated_by": "src/utils.py"
     },
     "results": {
         "metadata": {
             "script": "ml_models",
-            "timestamp": "2025-06-20T18:05:12.574012",
-            "duration": "0:00:31",
+            "timestamp": "2025-06-20T18:51:32.690216",
+            "duration": "0:00:34",
             "project_root": "/home/kernel/projects/github.com/noepraexis/fase4-cap3"
         },
         "results": {
